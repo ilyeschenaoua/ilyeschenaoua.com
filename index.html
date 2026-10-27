@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0f17">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ilyes">
+<title>Ilyes Saad Chenaoua</title>
+<meta name="description" content="Ilyes Saad Chenaoua: product, account management and business development in Saudi Arabia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link rel="icon" href="logo-icon.svg?v=3" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=53">
+</head>
+<body>
+
+<!-- The logo, defined once and reused everywhere: an "i" with a glowing pixel dot and a circuit-trace "S" with a glitch split -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="lbg" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#151b28"/><stop offset="1" stop-color="#07090f"/>
+    </linearGradient>
+    <filter id="lglow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="lgs" x1="20" y1="100" x2="100" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <!-- "S" drawn as a journey: a glowing start node, an S-curve route, an arrow out -->
+    <symbol id="logo-mark" viewBox="0 0 120 120">
+      <rect x="2" y="2" width="116" height="116" rx="30" fill="url(#lbg)" stroke="url(#lg)" stroke-width="3"/>
+      <path d="M28 88H68a14 14 0 0 0 0-28H52a14 14 0 0 1 0-28H84" fill="none" stroke="url(#lgs)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M80 20 96 32 80 44" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle class="lm-dot" cx="28" cy="88" r="9" fill="#fff" filter="url(#lglow)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="ambient" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span></div>
+
+<div class="splash" aria-hidden="true">
+  <div class="splash-grid"></div>
+  <div class="splash-glow"></div>
+  <div class="splash-inner">
+    <svg class="splash-mark" viewBox="0 0 120 120" fill="none">
+      <path class="tile-fill" d="M32 2h56a30 30 0 0 1 30 30v56a30 30 0 0 1-30 30H32A30 30 0 0 1 2 88V32A30 30 0 0 1 32 2z" fill="url(#lbg)"/>
+      <path class="draw d1" pathLength="1" d="M32 2h56a30 30 0 0 1 30 30v56a30 30 0 0 1-30 30H32A30 30 0 0 1 2 88V32A30 30 0 0 1 32 2z" stroke="url(#lg)" stroke-width="3"/>
+      <g class="nodes"><circle cx="28" cy="88" r="9" fill="#fff" filter="url(#lglow)"/></g>
+      <path class="draw d3" pathLength="1" d="M28 88H68a14 14 0 0 0 0-28H52a14 14 0 0 1 0-28H84" stroke="url(#lgs)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="arrow-in" d="M80 20 96 32 80 44" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <p class="splash-name" data-text="ILYES SAAD CHENAOUA">ILYES SAAD CHENAOUA</p>
+    <p class="splash-sub">&gt; product · clients · growth<span class="caret">_</span></p>
+    <div class="splash-bar"><span></span></div>
+  </div>
+</div>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#home" data-view="home" aria-label="Ilyes Saad Chenaoua, home">
+      <svg class="brand-mark" viewBox="0 0 120 120" width="34" height="34" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="brand-text">ILYES<span>_</span></span>
+    </a>
+    <div class="switch" role="tablist" aria-label="Pages">
+      <button role="tab" id="tab-home" aria-controls="view-home" aria-selected="true" data-view="home">Home</button>
+      <button role="tab" id="tab-career" aria-controls="view-career" aria-selected="false" data-view="career">Career</button>
+      <button role="tab" id="tab-personal" aria-controls="view-personal" aria-selected="false" data-view="personal">Personal</button>
+      <button role="tab" id="tab-portfolio" aria-controls="view-portfolio" aria-selected="false" data-view="portfolio">Portfolio</button>
+      <span class="switch-pill" aria-hidden="true"></span>
+    </div>
+    <button class="theme-btn" type="button" aria-label="Toggle light and dark mode">
+      <svg class="sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ========== HOME ========== -->
+<div id="view-home" class="view home" role="tabpanel" aria-labelledby="tab-home">
+  <div class="home-bg" aria-hidden="true"></div>
+  <div class="home-inner wrap">
+    <p class="home-kicker">&gt; hello, world<span class="caret">_</span></p>
+    <h1 class="home-title">I'm <span class="grad">Ilyes</span>.<br>Where do you want to go?</h1>
+    <div class="doors">
+      <a class="door door-career" href="#career" data-view="career">
+        <span class="door-photo" aria-hidden="true"></span>
+        <span class="door-glow" aria-hidden="true"></span>
+        <span class="door-num">01</span>
+        <span class="door-title">Career</span>
+        <span class="door-text">Experience, skills and the products and accounts I've worked on.</span>
+        <span class="door-go">Enter <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="door door-personal" href="#personal" data-view="personal">
+        <span class="door-photo" aria-hidden="true"></span>
+        <span class="door-glow" aria-hidden="true"></span>
+        <span class="door-num">02</span>
+        <span class="door-title">Personal</span>
+        <span class="door-text">Travel, training and life off the clock.</span>
+        <span class="door-go">Enter <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="door door-portfolio" href="#portfolio" data-view="portfolio">
+        <span class="door-glow" aria-hidden="true"></span>
+        <span class="door-num">03</span>
+        <span class="door-floaters" aria-hidden="true">
+          <span class="mini m-neom"><img src="portfolio/logos/neom-emblem.png" alt=""></span>
+          <span class="mini m-mag"><img src="portfolio/logos/mag.svg" alt=""></span>
+          <span class="mini m-gifted"><img src="portfolio/logos/gifted-wallet.svg" alt=""></span>
+          <span class="mini m-cme"><img src="portfolio/cme/icon.jpg" alt=""></span>
+        </span>
+        <span class="door-title">Portfolio</span>
+        <span class="door-text">NEOM, MAG, Gifted Wallet and CMe Jobs: the work I've helped ship.</span>
+        <span class="door-go">Enter <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+    <p class="powered home-powered">
+      <svg viewBox="0 0 120 120" width="14" height="14" aria-hidden="true"><use href="#logo-mark"/></svg>
+      Powered by <b>Ilyes Chenaoua</b>
+    </p>
+  </div>
+</div>
+
+<header class="hero wrap" id="top">
+  <img class="avatar" data-for="career" src="avatar-career.jpg" alt="Ilyes Saad Chenaoua, professional portrait" width="112" height="112">
+  <img class="avatar" data-for="personal" src="avatar-personal.jpg?v=2" alt="Ilyes, casual selfie in the car" width="112" height="112" hidden>
+  <p class="eyebrow">Dammam, Saudi Arabia · open to relocate to Riyadh</p>
+  <h1>Ilyes Saad Chenaoua</h1>
+  <p class="lede" data-for="career">I build digital products and the client relationships around them: from discovery and requirements to launch, growth and closing the deal.</p>
+  <p class="lede" data-for="personal" hidden>Off the clock you'll find me travelling, in the gym, or somewhere green. Algerian and Saudi roots.</p>
+  <div class="actions">
+    <a class="btn primary" href="mailto:ilyessaadch@gmail.com">ilyessaadch@gmail.com</a>
+    <a class="btn" href="tel:+966539004915">+966 53 900 4915</a>
+    <a class="btn" href="https://www.linkedin.com/in/elyas-chenaoua-6b1838414/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+</header>
+
+<!-- ========== CAREER ========== -->
+<div id="view-career" class="view" role="tabpanel" aria-labelledby="tab-career">
+
+  <section class="stats wrap reveal" aria-label="Highlights">
+    <div><strong data-count="5" data-suffix="+">5+</strong><span>years on digital products and clients in Saudi Arabia</span></div>
+    <div class="stat-kfupm"><img class="stat-logo" src="career/logos/kfupm-mark.svg" alt="" width="34" height="34"><strong>KFUPM</strong><span>graduate, B.Sc. Management Information Systems</span></div>
+    <div><strong>4 of 9</strong><span>pitched accounts won at Lenzo</span></div>
+    <div><strong data-count="50" data-suffix="+">50+</strong><span>qualified RFQs in my first three months at Asyad</span></div>
+  </section>
+
+  <main class="wrap">
+
+    <section id="about" class="block reveal about">
+      <figure class="about-photo img-reveal">
+        <img src="career/office.jpg" alt="Ilyes at the office, arms crossed" loading="lazy" width="720" height="1280">
+      </figure>
+      <h2>About</h2>
+      <div class="prose">
+        <p>I have spent 5+ years on digital products and client work in Saudi Arabia. As a Product Owner I delivered a blockchain proof of concept for a confidential <b>NEOM</b> project, designed for 10,000 users, and as a contract Product Manager I took <b>Gifted Wallet</b> from concept to MVP in four months.</p>
+        <p>On the commercial side, I managed accounts such as <b>Tamimi Markets, Tree Insurance, MoneyDo and AON</b> at Lenzo, built a freelance team for SEO and TikTok and Instagram ads, and today run the full sales cycle in freight and logistics at <b>Asyad Group</b>. I also founded <b>Luna Lights</b>, an e-commerce brand on Salla, so I understand conversion from the seller's side too.</p>
+        <p>I am fluent in Arabic and English, and use Claude every day for documentation, research, reporting and complex multi-step work.</p>
+      </div>
+    </section>
+
+    <section id="experience" class="block">
+      <h2 class="reveal">Experience</h2>
+      <div class="filters reveal" role="group" aria-label="Filter experience">
+        <button class="chip-btn is-on" data-filter="all">All</button>
+        <button class="chip-btn" data-filter="product">Product</button>
+        <button class="chip-btn" data-filter="commercial">Commercial</button>
+        <button class="chip-btn" data-filter="founder">Founder</button>
+      </div>
+      <ol class="timeline">
+
+        <li class="reveal" data-tags="commercial">
+          <div class="meta"><span class="date">01/2026 – Present</span><span class="place">Dammam</span><span class="co-badge"><img class="co-logo" src="career/logos/asyad.png" alt="Asyad Group logo" width="84" height="84" loading="lazy"></span></div>
+          <div class="role">
+            <h3>Business Development Executive <small>Freight &amp; Logistics</small></h3>
+            <p class="org">Asyad Group (Skybridge Freight Solutions)</p>
+            <ul>
+              <li>Run the full sales cycle from site visits and RFQs to quotations, contracts and closing, generating 50+ qualified RFQs in my first three months and closing several deals.</li>
+              <li>Visit 15+ customers a week across manufacturers and traders, turning their requirements into priced solutions with the pricing and operations teams.</li>
+              <li>Onboarded 2 carrier partners and completed the company's two-month business development and logistics training program.</li>
+              <li>Use Claude daily for quotations, proposals, prospect trackers and outreach scripts through its Gmail, Google Drive and Calendar connections, and built custom Claude Skills for repeat document workflows such as vendor registrations.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="reveal" data-tags="commercial">
+          <div class="meta"><span class="date">02/2025 – 12/2025</span><span class="place">Jeddah</span><span class="co-badge"><img class="co-logo" src="career/logos/lenzo.png" alt="Lenzo logo" width="84" height="84" loading="lazy"></span></div>
+          <div class="role">
+            <h3>Digital Account Manager</h3>
+            <p class="org">Lenzo Smart Marketing Solutions</p>
+            <ul>
+              <li>Managed key B2B accounts (Tamimi Markets, Tree Insurance, MoneyDo, AON): gathered requirements, defined scopes and handled client communication through delivery. Won 4 of 9 pitched accounts through tailored proposals.</li>
+              <li>Recruited and managed a freelance team covering SEO, TikTok ads and Instagram ads, including SEO delivery for Tree Insurance, and brought in freelance designers for wireframes and UI/UX work.</li>
+              <li>Ran Meta Ads and TikTok Ads campaigns with A/B testing, SEO/ASO and KPI tracking, using AI to analyze ad performance for client reports and spend decisions.</li>
+              <li>Maintained the company website on WordPress, improving UX/UI and mobile usability, and prepared quotations, claims and tax documents on Daftara ERP.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="reveal" data-tags="founder">
+          <div class="meta"><span class="date">10/2024 – 02/2025</span><span class="place tag">Founder</span><span class="co-badge"><img class="co-logo" src="career/logos/luna-lights.png" alt="Luna Lights logo" width="84" height="84" loading="lazy"></span></div>
+          <div class="role">
+            <h3>Founder</h3>
+            <p class="org">Luna Lights E-commerce</p>
+            <ul>
+              <li>Built and launched a home décor lighting brand on Salla, handling product sourcing, branding, pricing, product pages and conversion, validated with real sales.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="reveal" data-tags="product">
+          <div class="meta"><span class="date">01/2024 – 04/2024</span><span class="place">Jeddah</span><span class="co-badge"><img class="co-logo" src="career/logos/gifted-wallet.svg" alt="Gifted Wallet logo" width="84" height="84" loading="lazy"></span></div>
+          <div class="role">
+            <h3>Product Manager <small>Contract</small></h3>
+            <p class="org">Gifted Wallet</p>
+            <ul>
+              <li>Took a parents-and-kids chores app from concept to MVP in 4 months: refined the business model, wrote the FRD, mapped both user journeys, ran sprint planning, reviews and retrospectives, and managed a freelance UX/UI designer.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="reveal" data-tags="product">
+          <div class="meta"><span class="date">01/2021 – 02/2025</span><span class="place">Jeddah</span><span class="co-badge"><img class="co-logo" src="career/logos/taurus.png" alt="Taurus Human-Centered Design logo" width="84" height="84" loading="lazy"></span></div>
+          <div class="role">
+            <h3>Product Owner</h3>
+            <p class="org">Taurus Human-Centered Design</p>
+            <ul>
+              <li>Delivered a blockchain proof of concept for the confidential NEOM Technology Project, designed for 10,000 users and 100,000 transactions per minute, owning FRDs, user journeys and Agile delivery.</li>
+              <li>Ran UAT with a NEOM focus group and turned the feedback into reports that shaped the next iteration.</li>
+              <li>Led discovery for the MAG (Al Majal Alarabi Group) and Dirah Development websites: benchmarking, wireframes with the UX/UI team, and deployment.</li>
+              <li>Managed the MAG website's content on WordPress and coordinated with the design team and developers on design and layout changes. The site is still live today.</li>
+              <li>Tested CMe Jobs, a video CV hiring app later acquired by a Canadian company, before release through UAT and TestFlight QA cycles.</li>
+              <li>Coordinated the App Store release of MetaEarth, an AR social app.</li>
+            </ul>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <a class="cta-portfolio reveal" href="#portfolio" data-view="portfolio">
+      <span>See the work behind these roles: MAG, Gifted Wallet and CMe Jobs</span>
+      <strong>Portfolio →</strong>
+    </a>
+
+    <section id="education" class="block reveal">
+      <h2>Education</h2>
+      <ol class="edu-list">
+        <li class="edu">
+          <a class="edu-logo" href="https://www.kfupm.edu.sa/" target="_blank" rel="noopener"><img src="career/logos/kfupm.svg" alt="KFUPM logo" width="56" height="56"></a>
+          <div>
+            <h3>B.Sc. Management Information Systems</h3>
+            <p class="org"><a href="https://www.kfupm.edu.sa/" target="_blank" rel="noopener">KFUPM Business School, King Fahd University of Petroleum and Minerals ↗</a>, Dhahran</p>
+          </div>
+          <span class="date">2023</span>
+        </li>
+        <li class="edu">
+          <a class="edu-logo" href="https://almajdinternationalschool.com/" target="_blank" rel="noopener"><img src="career/logos/al-majd.png?v=2" alt="Al-Majd International School logo" width="56" height="56"></a>
+          <div>
+            <h3><a href="https://almajdinternationalschool.com/" target="_blank" rel="noopener">Al-Majd International School ↗</a></h3>
+            <p class="org">Secondary education, Dammam</p>
+            <ul class="quals">
+              <li><b>IGCSE O Level</b> 5 subjects</li>
+              <li><b>AS Level</b> 2 subjects</li>
+            </ul>
+          </div>
+          <span class="date">Grades 8 – 12</span>
+        </li>
+        <li class="edu">
+          <a class="edu-logo" href="https://www.newworldschool.com.sa/" target="_blank" rel="noopener"><img src="career/logos/new-world.png" alt="New World International School logo" width="56" height="56"></a>
+          <div>
+            <h3><a href="https://www.newworldschool.com.sa/" target="_blank" rel="noopener">New World International School ↗</a></h3>
+            <p class="org">Primary education</p>
+          </div>
+          <span class="date">Grades 1 – 6</span>
+        </li>
+      </ol>
+      <p class="langs">Languages: Arabic and English (fluent)</p>
+    </section>
+
+    <section id="milestones" class="block reveal">
+      <h2>Graduation &amp; recommendation</h2>
+      <div class="creds">
+        <figure class="cred cred-photo">
+          <button class="shot img-reveal" data-caption="KFUPM graduate"><img src="personal/kfupm-grad.jpg" alt="Ilyes in a thobe, shemagh and KFUPM graduation gown" loading="lazy" style="object-position: 50% 30%"></button>
+          <figcaption><b>Graduation day</b>KFUPM Business School, Dhahran</figcaption>
+        </figure>
+        <figure class="cred cred-cert">
+          <button class="shot img-reveal" data-caption="B.Sc. Management Information Systems, King Fahd University of Petroleum and Minerals"><img src="career/kfupm-certificate.jpg" alt="KFUPM degree certificate: Bachelor of Science in Management Information Systems, awarded to Ilyes Saad Chenaoua" loading="lazy"></button>
+          <figcaption><b>Degree certificate</b>B.Sc. Management Information Systems</figcaption>
+        </figure>
+        <figure class="cred cred-letter">
+          <button class="shot img-reveal" data-caption="Recommendation from Ziad Jarrar, CEO and Founding Partner, Taurus Human-Centered Design"><img src="career/taurus-recommendation.jpg" alt="Recommendation letter from Ziad Jarrar, CEO and Founding Partner of Taurus Human-Centered Design" loading="lazy" style="object-position: 50% 0"></button>
+          <figcaption><b>Recommendation, Taurus</b>From Ziad Jarrar, CEO and Founding Partner</figcaption>
+        </figure>
+      </div>
+      <blockquote class="cred-quote">
+        <p>“A talented and inspiring team member who fosters growth, innovation, and collaboration.”</p>
+        <cite>Ziad Jarrar, CEO and Founding Partner, Taurus</cite>
+        <p class="cred-thanks">Thank you, Ziad. Learning from you was truly enlightening, and I'm grateful for my years at Taurus.</p>
+      </blockquote>
+    </section>
+
+    <section id="skills" class="block reveal">
+      <h2>Skills</h2>
+      <div class="skill-groups">
+        <div>
+          <h3>Product</h3>
+          <ul class="chips">
+            <li>Roadmaps &amp; prioritization</li><li>Customer discovery</li><li>FRDs, PRDs &amp; user stories</li><li>User journeys</li><li>Agile / Scrum</li><li>UAT &amp; QA (TestFlight)</li><li>Wireframing with UX/UI teams</li><li>Go-to-market</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Clients &amp; growth</h3>
+          <ul class="chips">
+            <li>Account management</li><li>Proposals &amp; pitching</li><li>Negotiation</li><li>Quotations, contracts &amp; claims</li><li>SEO &amp; ASO</li><li>Paid social</li><li>A/B testing &amp; KPI tracking</li><li>Freelancer &amp; vendor coordination</li>
+          </ul>
+        </div>
+        <div>
+          <h3>AI &amp; tools</h3>
+          <ul class="chips">
+            <li>Claude (Projects, Skills, connectors)</li><li>ChatGPT</li><li>Perplexity</li><li>Meta Ads</li><li>TikTok Ads</li><li>Figma</li><li>Canva</li><li>WordPress</li><li>Salla</li><li>Trello · Monday · Teamwork</li><li>Daftara</li><li>Excel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ========== PORTFOLIO ========== -->
+<div id="view-portfolio" class="view" role="tabpanel" aria-labelledby="tab-portfolio" hidden>
+  <div class="pf-switch-wrap" id="pf-views">
+    <div class="pf-switch" role="tablist" aria-label="Portfolio view">
+      <button role="tab" aria-selected="true" aria-controls="pf-product" data-pf="product">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        Product work
+      </button>
+      <button role="tab" aria-selected="false" aria-controls="pf-digital" data-pf="digital">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+        Digital &amp; social
+      </button>
+      <span class="pf-pill" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <header class="pf-hero wrap">
+    <div class="pf-copy">
+      <p class="pf-kicker">&gt; portfolio<span data-pf-set="digital" hidden> / social</span><span class="caret">_</span></p>
+
+      <h1 class="pf-title" data-pf-set="product">Products I've helped <span class="grad">ship.</span></h1>
+      <h1 class="pf-title" data-pf-set="digital" hidden>Brands I've helped <span class="grad">grow.</span></h1>
+
+      <p class="pf-sub" data-pf-set="product">A confidential proof of concept, a website and two apps, taken from discovery and requirements through testing and delivery.</p>
+      <p class="pf-sub" data-pf-set="digital" hidden>Social media, paid ads, SEO and customer care for client brands, as Digital Account Manager at Lenzo.</p>
+
+      <ol class="pf-index" data-pf-set="product">
+        <li><a href="#p-neom" data-jump="p-neom"><span>01</span>NEOM<em>Confidential PoC</em></a></li>
+        <li><a href="#p-mag" data-jump="p-mag"><span>02</span>MAG<em>Website</em></a></li>
+        <li><a href="#p-cme" data-jump="p-cme"><span>03</span>CMe Jobs<em>App</em></a></li>
+        <li><a href="#p-gifted" data-jump="p-gifted"><span>04</span>Gifted Wallet<em>Concept</em></a></li>
+      </ol>
+      <ol class="pf-index" data-pf-set="digital" hidden>
+        <li><a href="#p-moneydo" data-jump="p-moneydo"><span>01</span>MoneyDo<em>Social &amp; ads</em></a></li>
+        <li><a href="#p-tree" data-jump="p-tree"><span>02</span>Tree Insurance<em>SEO</em></a></li>
+        <li><a href="#p-mayam" data-jump="p-mayam"><span>03</span>Mayam Aesthetics<em>Social</em></a></li>
+      </ol>
+    </div>
+
+    <div class="orbit" data-pf-set="product" aria-label="Product work">
+      <svg class="orbit-lines" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="og" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a855f7"/>
+          </linearGradient>
+        </defs>
+        <circle class="ring r1" cx="200" cy="200" r="150" stroke="url(#og)" stroke-opacity=".7" stroke-dasharray="2 8"/>
+        <circle class="ring r2" cx="200" cy="200" r="95" stroke="url(#og)" stroke-opacity=".5" stroke-dasharray="1 6"/>
+        <path class="link" pathLength="1" d="M200 200 L88 96" stroke="url(#og)"/>
+        <path class="link" pathLength="1" d="M200 200 L312 104" stroke="url(#og)"/>
+        <path class="link" pathLength="1" d="M200 200 L304 312" stroke="url(#og)"/>
+        <path class="link" pathLength="1" d="M200 200 L96 304" stroke="url(#og)"/>
+        <path class="pulse" pathLength="1" d="M200 200 L88 96"/>
+        <path class="pulse" pathLength="1" d="M200 200 L312 104" style="animation-delay: 2.1s"/>
+        <path class="pulse" pathLength="1" d="M200 200 L304 312" style="animation-delay: 2.8s"/>
+        <path class="pulse" pathLength="1" d="M200 200 L96 304" style="animation-delay: 3.5s"/>
+        <circle class="sat" cx="350" cy="200" r="3.5" fill="#22d3ee"/>
+        <circle class="sat s2" cx="105" cy="200" r="2.5" fill="#a855f7"/>
+      </svg>
+      <div class="orbit-core" aria-hidden="true">
+        <svg viewBox="0 0 120 120" width="64" height="64"><use href="#logo-mark"/></svg>
+      </div>
+      <a class="tile t-neom" href="#p-neom" data-jump="p-neom" aria-label="NEOM confidential proof of concept">
+        <img src="portfolio/logos/neom-emblem.png" alt="NEOM logo">
+        <span class="tile-tag">Confidential</span>
+      </a>
+      <a class="tile t-mag" href="#p-mag" data-jump="p-mag" aria-label="MAG website">
+        <img src="portfolio/logos/mag.svg" alt="MAG logo">
+        <span class="tile-tag">Website</span>
+      </a>
+      <a class="tile t-gifted" href="#p-gifted" data-jump="p-gifted" aria-label="Gifted Wallet concept">
+        <img src="portfolio/logos/gifted-wallet.svg" alt="Gifted Wallet logo">
+        <span class="tile-tag">Concept</span>
+      </a>
+      <a class="tile t-cme" href="#p-cme" data-jump="p-cme" aria-label="CMe Jobs app">
+        <img src="portfolio/cme/icon.jpg" alt="CMe Jobs logo">
+        <span class="tile-tag">App</span>
+      </a>
+    </div>
+
+    <div class="orbit orbit-digital" data-pf-set="digital" aria-label="Digital and social clients" hidden>
+      <svg class="orbit-lines" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="og2" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f59e0b"/><stop offset=".5" stop-color="#ec4899"/><stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+        <circle class="ring r1" cx="200" cy="200" r="150" stroke="url(#og2)" stroke-opacity=".7" stroke-dasharray="2 8"/>
+        <circle class="ring r2" cx="200" cy="200" r="95" stroke="url(#og2)" stroke-opacity=".5" stroke-dasharray="1 6"/>
+        <path class="link" pathLength="1" d="M200 200 L200 74" stroke="url(#og2)"/>
+        <path class="link" pathLength="1" d="M200 200 L318 284" stroke="url(#og2)"/>
+        <path class="link" pathLength="1" d="M200 200 L82 284" stroke="url(#og2)"/>
+        <path class="pulse" pathLength="1" d="M200 200 L200 74"/>
+        <path class="pulse" pathLength="1" d="M200 200 L318 284" style="animation-delay: 2.1s"/>
+        <path class="pulse" pathLength="1" d="M200 200 L82 284" style="animation-delay: 2.9s"/>
+        <circle class="sat" cx="350" cy="200" r="3.5" fill="#f59e0b"/>
+        <circle class="sat s2" cx="105" cy="200" r="2.5" fill="#ec4899"/>
+      </svg>
+      <div class="orbit-core" aria-hidden="true">
+        <svg viewBox="0 0 120 120" width="64" height="64"><use href="#logo-mark"/></svg>
+      </div>
+      <a class="tile t-moneydo" href="#p-moneydo" data-jump="p-moneydo" aria-label="MoneyDo social media and ads">
+        <span class="t-crop t-crop-md" role="img" aria-label="MoneyDo logo"></span>
+        <span class="tile-tag">Social &amp; ads</span>
+      </a>
+      <a class="tile t-tree" href="#p-tree" data-jump="p-tree" aria-label="Tree Insurance SEO">
+        <span class="t-crop t-crop-tree" role="img" aria-label="Tree logo"></span>
+        <span class="tile-tag">SEO</span>
+      </a>
+      <a class="tile t-mayam" href="#p-mayam" data-jump="p-mayam" aria-label="Mayam Aesthetics social media">
+        <span class="t-mayam-word" role="img" aria-label="Mayam Aesthetics logo">MAYAM</span>
+        <span class="tile-tag">Social</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="block reveal projects" id="pf-product" role="tabpanel" data-pf-panel="product">      <h2>Product work</h2>
+
+      <article class="project" id="p-neom">
+        <div class="classified img-reveal" role="img" aria-label="NEOM logo on a confidential project card">
+          <span class="cl-scan" aria-hidden="true"></span>
+          <span class="cl-corner tl"></span><span class="cl-corner tr"></span><span class="cl-corner bl"></span><span class="cl-corner br"></span>
+          <img class="cl-emblem" src="portfolio/logos/neom-emblem.png" alt="NEOM logo">
+          <img class="cl-logo" src="portfolio/logos/neom-white.svg" alt="">
+          <span class="cl-redact" aria-hidden="true"><i style="width:72%"></i><i style="width:48%"></i><i style="width:60%"></i></span>
+          <span class="cl-stamp">Confidential</span>
+        </div>
+        <div class="project-body">
+          <p class="project-meta">01 · Proof of concept · at Taurus Human-Centered Design</p>
+          <h3>NEOM</h3>
+          <p class="project-sum">A confidential proof of concept delivered for NEOM. The product itself stays under wraps.</p>
+          <ul>
+            <li>Delivered the proof of concept, designed for 10,000 users and 100,000 transactions per minute.</li>
+            <li>Owned the FRDs, user journeys and Agile delivery.</li>
+            <li>Ran UAT with a NEOM focus group and turned the feedback into reports that shaped the next iteration.</li>
+          </ul>
+          <ul class="tags"><li>Proof of concept</li><li>FRDs</li><li>User journeys</li><li>UAT</li><li>Agile</li></ul>
+          <p class="cl-note">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            Confidential project, no public link
+          </p>
+        </div>
+      </article>
+
+      <article class="project" id="p-mag">
+        <a class="brand-stage mag-stage img-reveal" href="https://mag-sa.com/" target="_blank" rel="noopener" aria-label="Open the MAG website">
+          <span class="ms-pattern" aria-hidden="true"></span>
+          <span class="ms-glow" aria-hidden="true"></span>
+          <img class="stage-logo ms-logo" src="portfolio/logos/mag.svg" alt="MAG logo">
+          <span class="ms-sweep" aria-hidden="true"></span>
+          <span class="stage-browser">
+            <span class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>mag-sa.com · Our Projects</span></span>
+            <span class="mag-demo" role="img" aria-label="Recreation of the MAG projects map: each project in the list lights up in turn and its pin moves on the map of Saudi Arabia">
+              <span class="md-list" aria-hidden="true">
+                <span class="md-title">Our Projects</span>
+                <span class="md-item" data-x="32" data-y="53">The Two Holy Mosques</span>
+                <span class="md-item" data-x="55" data-y="37">Riyadh Metro Line 1 &amp; 2</span>
+                <span class="md-item" data-x="28" data-y="51">Jeddah Plaza – LaPaz</span>
+                <span class="md-item" data-x="52" data-y="35">Diriyah North Gate</span>
+                <span class="md-item" data-x="17" data-y="36">St. Regis Red Sea Resort</span>
+                <span class="md-item" data-x="68" data-y="34">Al Ahsa – Eastern Region</span>
+                <span class="md-item" data-x="12" data-y="24">NEOM – Green Hydrogen</span>
+              </span>
+              <span class="md-map" aria-hidden="true">
+                <span class="md-stage">
+                  <img src="portfolio/mag-map/map-bg.jpg" alt="" loading="lazy">
+                  <span class="md-marker"><i></i></span>
+                </span>
+              </span>
+            </span>
+          </span>
+          <span class="stage-chip ms-chip">WordPress · still live</span>
+        </a>
+        <div class="project-body">
+          <p class="project-meta">02 · Website · at Taurus Human-Centered Design</p>
+          <h3>MAG, Al Majal Alarabi Group</h3>
+          <p class="project-sum">Corporate website for one of Saudi Arabia's facility management and construction groups, founded in 1991.</p>
+          <ul>
+            <li>Led discovery: benchmarking and wireframes with the UX/UI team, through to deployment.</li>
+            <li>Managed the site's content on WordPress.</li>
+            <li>Coordinated the design team and developers on design and layout changes.</li>
+          </ul>
+          <ul class="tags"><li>WordPress</li><li>Discovery</li><li>Content</li><li>Design coordination</li></ul>
+          <a class="project-link" href="https://mag-sa.com/" target="_blank" rel="noopener">Visit mag-sa.com ↗</a>
+        </div>
+      </article>
+
+      <article class="project" id="p-cme">
+        <a class="app-stage img-reveal" href="https://apps.apple.com/sa/app/cme-jobs/id6738570874" target="_blank" rel="noopener" aria-label="Open CMe Jobs on the App Store">
+          <img class="phone p-left" src="portfolio/cme/shot-5.jpg" alt="CMe Jobs screen: customise your profile with a video CV" loading="lazy">
+          <img class="phone p-right" src="portfolio/cme/shot-6.jpg" alt="CMe Jobs screen: track your application in real time" loading="lazy">
+          <img class="phone p-mid" src="portfolio/cme/shot-3.jpg" alt="CMe Jobs screen: navigate job posts tailored to you" loading="lazy">
+        </a>
+        <div class="project-body">
+          <p class="project-meta">03 · iPhone app · at Taurus Human-Centered Design</p>
+          <h3 class="app-title"><img src="portfolio/cme/icon.jpg" alt="" width="40" height="40">CMe Jobs</h3>
+          <p class="project-sum">"See me, before my CV." A job search app built around video: video CVs, referral videos from colleagues, easy applications and direct chat with recruiters. Later acquired by a Canadian company.</p>
+          <ul>
+            <li>Tested the app before release through UAT and TestFlight QA cycles.</li>
+            <li>Reported bugs including comment lag and navigation crashes.</li>
+          </ul>
+          <ul class="tags"><li>UAT</li><li>TestFlight</li><li>QA</li><li>iOS</li></ul>
+          <div class="project-links">
+            <a class="store-badge" href="https://apps.apple.com/sa/app/cme-jobs/id6738570874" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.97-3.46-1.07-1.57-2.74-1.78-3.33-1.8-1.42-.14-2.77.83-3.49.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.79.75 3.01.72c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.24-2.54 1.26-2.6-.03-.01-2.42-.93-2.47-3.71zM14.08 5.84c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.02.08 2.07-.52 2.71-1.29z"/></svg>
+              <span><small>Download on the</small>App Store</span>
+            </a>
+            <a class="project-link" href="https://cmejobs.com/" target="_blank" rel="noopener">cmejobs.com ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" id="p-gifted">
+        <a class="brand-stage gw-stage img-reveal" href="https://www.instagram.com/giftedwallet/" target="_blank" rel="noopener" aria-label="Open Gifted Wallet on Instagram">
+          <span class="gw-blob gb1" aria-hidden="true"></span>
+          <span class="gw-blob gb2" aria-hidden="true"></span>
+          <svg class="gw-star st1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+          <svg class="gw-star st2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+          <svg class="gw-star st3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z"/></svg>
+          <span class="gw-logo-card"><img src="portfolio/logos/gifted-wallet.svg" alt="Gifted Wallet logo"></span>
+          <span class="gw-flow" role="img" aria-label="The Gifted Wallet concept: a parent sets a task, the child completes it, earns a reward and saves toward a goal">
+            <span class="gw-step"><b>01</b>Parent sets a task</span>
+            <span class="gw-step"><b>02</b>Child completes it</span>
+            <span class="gw-step"><b>03</b>Earns a reward</span>
+            <span class="gw-step"><b>04</b>Saves toward a goal</span>
+          </span>
+          <span class="stage-chip gw-chip">Concept → MVP</span>
+        </a>
+        <div class="project-body">
+          <p class="project-meta">04 · App concept · Product Manager (contract) · 01/2024 – 04/2024</p>
+          <h3>Gifted Wallet</h3>
+          <p class="project-sum">A parent-child wallet concept: parents set tasks and rewards, children earn, save toward their goals and build money habits early.</p>
+          <ul>
+            <li>Took the concept to an MVP: refined the business model and wrote the FRD.</li>
+            <li>Mapped both the parent and the child user journeys.</li>
+            <li>Ran sprint planning, reviews and retrospectives, and managed a freelance UX/UI designer.</li>
+          </ul>
+          <ul class="tags"><li>Concept to MVP</li><li>Business model</li><li>FRD</li><li>User journeys</li><li>Agile</li></ul>
+          <div class="project-links">
+            <a class="project-link" href="https://gifted-wallet.com/" target="_blank" rel="noopener">gifted-wallet.com ↗</a>
+            <a class="project-link" href="https://www.instagram.com/giftedwallet/" target="_blank" rel="noopener">Instagram ↗</a>
+            <a class="project-link" href="https://www.linkedin.com/company/giftedwallet/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="block reveal projects digital" id="pf-digital" role="tabpanel" data-pf-panel="digital" hidden>
+      <h2>Digital marketing &amp; social</h2>
+      <p class="section-intro">Social media, paid ads, SEO and customer care I've run for brands, alongside the product work.</p>
+
+      <article class="project" id="p-moneydo">
+        <a class="brand-stage mdo-stage img-reveal" href="https://www.instagram.com/moneydoksa/" target="_blank" rel="noopener" aria-label="Open MoneyDo on Instagram">
+          <span class="mdo-glow" aria-hidden="true"></span>
+          <span class="mdo-logo" role="img" aria-label="MoneyDo logo"></span>
+          <span class="ig-phone">
+            <span class="ig-bar" aria-hidden="true"><i></i>moneydoksa</span>
+            <span class="ig-feed"><span class="ig-scroll">
+              <img src="portfolio/social/moneydo-feed-1.webp" alt="MoneyDo Instagram posts: partnership signings at Cityscape Global and the KAFD reel" loading="lazy">
+              <img src="portfolio/social/moneydo-feed-2.webp" alt="MoneyDo Instagram posts: signings, the Cityscape Global venue and the stand" loading="lazy">
+              <img src="portfolio/social/moneydo-feed-3.webp" alt="MoneyDo Instagram posts: the stand, visitors and a 0% investment fees offer" loading="lazy">
+            </span></span>
+          </span>
+          <span class="ad-chips" aria-hidden="true"><b>Meta</b><b>TikTok</b><b>X</b></span>
+          <span class="stage-chip mdo-chip">Cityscape Global coverage</span>
+        </a>
+        <div class="project-body">
+          <p class="project-meta">01 · Social media &amp; paid ads · Digital Account Manager, Lenzo</p>
+          <h3>MoneyDo</h3>
+          <p class="project-sum">Social media and paid campaigns for MoneyDo, a digital finance platform in KAFD, around its presence at Cityscape Global.</p>
+          <ul>
+            <li>Led the photography team and hired video editors for daily event recaps and posts.</li>
+            <li>Ran the social posting and paid ads on Meta, TikTok and X, with performance reports for the client.</li>
+            <li>Coordinated the press release SABQ published on MoneyDo's 6 MoUs at Cityscape Global.</li>
+          </ul>
+          <ul class="tags"><li>Social media</li><li>Paid ads</li><li>Content production</li><li>Reporting</li></ul>
+          <div class="project-links">
+            <a class="project-link" href="https://moneydo.sa/" target="_blank" rel="noopener">moneydo.sa ↗</a>
+            <a class="project-link" href="https://www.instagram.com/moneydoksa/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" id="p-tree">
+        <a class="brand-stage tree-stage img-reveal" href="https://store.tree.com.sa/sale/en/motor/base-insurance" target="_blank" rel="noopener" aria-label="Open Tree's motor insurance page">
+          <span class="tree-leaf" aria-hidden="true"></span>
+          <span class="stage-browser tree-browser">
+            <span class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>store.tree.com.sa</span></span>
+            <img src="portfolio/social/tree-motor.jpg" alt="Tree's Motor Insurance page: Protect your ride" loading="lazy">
+          </span>
+          <span class="serp" aria-hidden="true">
+            <span class="serp-q"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>motor insurance saudi</span>
+            <span class="serp-url">store.tree.com.sa › sale › motor</span>
+            <span class="serp-title">Motor Insurance | Tree Digital Insurance</span>
+            <span class="serp-desc">Tree is Saudi Arabia's first digital insurance agency. Get fast, paperless coverage…</span>
+          </span>
+          <span class="stage-chip tree-chip">50+ keywords · EN / AR</span>
+        </a>
+        <div class="project-body">
+          <p class="project-meta">02 · SEO · Digital Account Manager, Lenzo</p>
+          <h3>Tree Digital Insurance</h3>
+          <p class="project-sum">SEO for Tree, Saudi Arabia's first digital insurance agency, across its English and Arabic product pages.</p>
+          <ul>
+            <li>Took charge of SEO and hired the team: SEO specialists and content writers.</li>
+            <li>Delivered keyword research (50+ keywords for motor and SME health insurance) and on-page optimisation in English and Arabic.</li>
+            <li>Audited each implementation on the test site with screenshot reports, and worked with Tree's tech team on URL changes and removing old pages from search.</li>
+            <li>Shared bi-weekly performance reports on keyword rankings.</li>
+          </ul>
+          <ul class="tags"><li>SEO</li><li>Keyword research</li><li>On-page</li><li>Content writers</li><li>Arabic &amp; English</li><li>Reporting</li></ul>
+          <div class="project-links">
+            <a class="project-link" href="https://store.tree.com.sa/sale/en/motor/base-insurance" target="_blank" rel="noopener">store.tree.com.sa ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" id="p-mayam">
+        <a class="brand-stage mayam-stage img-reveal" href="https://www.instagram.com/mayamaesthetics/" target="_blank" rel="noopener" aria-label="Open Mayam Aesthetics on Instagram">
+          <span class="mayam-word" aria-hidden="true">MAYAM</span>
+          <span class="mayam-posts"><img src="portfolio/social/mayam-posts.jpg" alt="Mayam Aesthetics Instagram posts: gummy smile treatment, Gain Again and vascular treatment" loading="lazy"></span>
+          <span class="dm-stack" aria-hidden="true">
+            <span class="dm"><i></i>New inquiry</span>
+            <span class="dm"><i></i>Appointment booked</span>
+            <span class="dm"><i></i>Follow-up sent</span>
+          </span>
+          <span class="stage-chip mayam-chip">@mayamaesthetics · 13.3K</span>
+        </a>
+        <div class="project-body">
+          <p class="project-meta">03 · Social media &amp; customer care · Digital Account Manager, Lenzo</p>
+          <h3>Mayam Aesthetics</h3>
+          <p class="project-sum">Instagram and customer care for Mayam Aesthetics, an aesthetics clinic in Jeddah by Magrabi Health.</p>
+          <ul>
+            <li>Managed customer inquiries and followed up on scheduled appointments.</li>
+            <li>Posted content on Instagram, with captions.</li>
+          </ul>
+          <ul class="tags"><li>Instagram</li><li>Captions</li><li>Customer inquiries</li><li>Appointments</li></ul>
+          <div class="project-links">
+            <a class="project-link" href="https://www.instagram.com/mayamaesthetics/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+        </div>
+      </article>    </section>
+
+    <div class="more-soon">
+        <span class="caret-dot" aria-hidden="true"></span>
+        More projects coming soon<span class="caret">_</span>
+      </div>
+
+  </main>
+</div>
+
+<!-- ========== PERSONAL ========== -->
+<div id="view-personal" class="view" role="tabpanel" aria-labelledby="tab-personal" hidden>
+  <main class="wrap">
+
+    <blockquote class="motto reveal">“You miss 100% of the shots you don't take.”</blockquote>
+
+    <section class="block reveal">
+      <h2>What I'm into</h2>
+      <div class="interests">
+        <div class="interest"><span class="icon" aria-hidden="true">✈️</span><h3>Travel</h3><p>From climbing the rocks of AlUla to the lakes of Sri Lanka. Sri Lanka is the one I keep wanting to go back to.</p></div>
+        <div class="interest"><span class="icon" aria-hidden="true">🏋️</span><h3>Strength training</h3><p>A gym regular. Best bench so far: a 220 lb one-rep max.</p></div>
+        <div class="interest"><span class="icon" aria-hidden="true">🌿</span><h3>Nature</h3><p>Happiest somewhere green, by water or up high.</p></div>
+        <div class="interest"><span class="icon" aria-hidden="true">🏃</span><h3>Events</h3><p>Fun runs and getting out with friends. The Color Run is still the best one so far.</p></div>
+      </div>
+    </section>
+
+    <section class="block reveal">
+      <h2>Moments</h2>
+      <div class="gallery">
+        <button class="shot wide img-reveal" data-caption="Sun, sea and a ferry ride"><img src="personal/ferry.jpg" alt="Ilyes smiling in sunglasses on a ferry, city skyline behind" loading="lazy" style="object-position: 30% 40%"></button>
+        <button class="shot tall img-reveal" data-caption="Climbing in AlUla"><img src="personal/alula.jpg" alt="Ilyes in a helmet climbing a sandstone rock face in AlUla" loading="lazy"></button>
+        <button class="shot tall img-reveal" data-caption="Deep talk with Yaşar Kemal. He's wax, I'm not."><img src="personal/wax-chat.jpg" alt="Ilyes in an armchair chatting with a wax figure of the writer Yaşar Kemal" loading="lazy" style="object-position: 30% 50%"></button>
+        <button class="shot tall img-reveal" data-caption="Smart casual, still smiling"><img src="personal/striped-shirt.jpg" alt="Ilyes in a striped shirt leaning against a wall, smiling" loading="lazy" style="object-position: 50% 20%"></button>
+        <button class="shot m-wide img-reveal" data-caption="KFUPM graduate"><img src="personal/kfupm-grad.jpg" alt="Ilyes in a thobe, shemagh and KFUPM graduation gown" loading="lazy" style="object-position: 50% 30%"></button>
+        <button class="shot tall img-reveal" data-caption="Going up"><img src="personal/escalator.jpg" alt="Ilyes standing on a metro escalator in a maroon jacket and red sneakers" loading="lazy" style="object-position: 50% 45%"></button>
+        <button class="shot img-reveal" data-caption="Sri Lanka, take me back"><img src="personal/lake.png" alt="Ilyes looking out over a lake and hills in Sri Lanka" loading="lazy"></button>
+        <button class="shot img-reveal" data-caption="Loading up"><img src="personal/gym-plates.jpg" alt="Ilyes loading a 20 kg plate in the gym" loading="lazy" style="object-position: 50% 25%"></button>
+        <button class="shot wide img-reveal" data-caption="Night out under the flag"><img src="personal/night.png" alt="Ilyes standing next to a Saudi flag at night" loading="lazy" style="object-position: 50% 40%"></button>
+      </div>
+      <p class="ig"><a href="https://www.instagram.com/saso421/" target="_blank" rel="noopener">More on Instagram @saso421 ↗</a></p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="footer-grid" aria-hidden="true"></div>
+  <div class="footer-inner wrap reveal">
+    <p class="footer-kicker">&gt; what's next?<span class="caret">_</span></p>
+    <h2 class="footer-title">
+      <span data-for="career">Let's work <span class="grad">together.</span></span>
+      <span data-for="portfolio" hidden>Got a project <span class="grad">in mind?</span></span>
+      <span data-for="personal" hidden>Say <span class="grad">hi.</span></span>
+    </h2>
+    <a class="footer-mail" href="mailto:ilyessaadch@gmail.com">
+      <span>ilyessaadch@gmail.com</span>
+      <span class="footer-arrow" aria-hidden="true">→</span>
+    </a>
+
+    <div class="footer-links">
+      <a class="social" href="https://www.linkedin.com/in/elyas-chenaoua-6b1838414/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.36h-4v-4.75c0-1.13-.02-2.6-1.58-2.6-1.59 0-1.83 1.24-1.83 2.52v4.83h-4z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a class="social" href="https://www.instagram.com/saso421/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a class="social" href="tel:+966539004915" aria-label="Call">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span>+966 53 900 4915</span>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-brand">
+        <svg viewBox="0 0 120 120" width="22" height="22" aria-hidden="true"><use href="#logo-mark"/></svg>
+        © 2026 Ilyes Saad Chenaoua
+      </span>
+      <span class="footer-loc">Dammam, Saudi Arabia</span>
+      <button class="to-top" type="button" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+  </div>
+  <p class="footer-giant reveal" aria-hidden="true">ILYES</p>
+  <p class="powered">
+    <svg viewBox="0 0 120 120" width="14" height="14" aria-hidden="true"><use href="#logo-mark"/></svg>
+    Powered by <b>Ilyes Chenaoua</b>
+  </p>
+</footer>
+
+<div class="lightbox" hidden>
+  <button class="lb-close" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" aria-label="Previous photo">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-nav lb-next" aria-label="Next photo">›</button>
+</div>
+
+<script src="script.js?v=17"></script>
+</body>
+</html>
