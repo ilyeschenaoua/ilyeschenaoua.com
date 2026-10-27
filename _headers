@@ -1,0 +1,14 @@
+# Netlify adds these headers to every page and file.
+# Content-Security-Policy: only load scripts, styles, fonts and images from this site
+#   (plus Google Fonts); inline style attributes are allowed for photo framing,
+#   data: images for one CSS pattern; no framing by other sites.
+# X-Frame-Options: same "no framing" rule for older browsers.
+# X-Content-Type-Options: browsers must trust the file type the server sends.
+# Referrer-Policy: other sites only see "ilyeschenaoua.com" when visitors click out.
+# Permissions-Policy: the site never needs camera, microphone, location or payments.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
