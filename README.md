@@ -13,4 +13,4 @@ Live at **https://ilyeschenaoua.com**
 
 Plain HTML, CSS and JavaScript. No build step: open `index.html` in a browser to run it locally.
 
-Hosted on Netlify.
+Hosted on Netlify, which redeploys the site automatically on every push to `main`.
