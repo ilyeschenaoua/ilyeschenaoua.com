@@ -291,6 +291,8 @@ body[data-view="home"] footer { display: none; }
   margin: 0 0 40px;
   font: 700 clamp(34px, 6vw, 60px)/1.08 "Space Grotesk", var(--sans);
   letter-spacing: -0.02em;
+  text-transform: none;
+  color: inherit;
 }
 .grad {
   background: linear-gradient(90deg, #22d3ee, #3b82f6 50%, #a855f7);
@@ -974,6 +976,8 @@ body[data-view="portfolio"] .hero { display: none; }
   margin: 0;
   font: 700 clamp(38px, 5.6vw, 62px)/1.04 "Space Grotesk", var(--sans);
   letter-spacing: -0.03em;
+  text-transform: none;
+  color: inherit;
 }
 .pf-sub { margin: 20px 0 32px; max-width: 26em; font-size: 18px; color: var(--muted); }
 .pf-index { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); max-width: 380px; }

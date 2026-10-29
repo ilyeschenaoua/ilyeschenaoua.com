@@ -1,0 +1,5 @@
+# Every search engine may crawl the whole site
+User-agent: *
+Allow: /
+
+Sitemap: https://ilyeschenaoua.com/sitemap.xml
