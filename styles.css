@@ -91,7 +91,6 @@ a { color: var(--accent); }
 .brand-mark { transition: transform .4s ease; filter: drop-shadow(0 3px 8px rgba(59, 130, 246, .4)); }
 .brand:hover .brand-mark { transform: scale(1.08); }
 .brand-text { font: 700 16px/1 "Space Grotesk", var(--sans); letter-spacing: .12em; }
-.brand-text span { color: #3b82f6; animation: blink 1.1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 
 /* Splash screen */
