@@ -16,12 +16,12 @@
       <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
+  <style>.cursor { animation: blink 1.1s steps(1, end) infinite; } @keyframes blink { 50% { opacity: 0; } } @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }</style>
   <rect width="420" height="140" rx="28" fill="#0b0f17"/>
   <g transform="translate(14 14) scale(.93)">
     <rect x="2" y="2" width="116" height="116" rx="30" fill="url(#bg)" stroke="url(#g)" stroke-width="3"/>
-    <path d="M28 88H68a14 14 0 0 0 0-28H52a14 14 0 0 1 0-28H84" stroke="url(#s)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M80 20 96 32 80 44" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="28" cy="88" r="9" fill="#fff" filter="url(#glow)"/>
+    <path d="M82 29.5H44a7 7 0 0 0-7 7V83a7 7 0 0 0 7 7H82" stroke="url(#s)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect class="cursor" x="46" y="53" width="31" height="13.5" rx="3" fill="#fff" filter="url(#glow)"/>
   </g>
   <text x="150" y="74" fill="#f2f4f8" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="40" font-weight="700" letter-spacing="3">ILYES SAAD</text>
   <text x="152" y="108" fill="url(#t)" font-family="JetBrains Mono, Consolas, monospace" font-size="20" font-weight="700" letter-spacing="8.5">CHENAOUA_</text>

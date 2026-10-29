@@ -25,12 +25,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-<link rel="icon" href="logo-icon.svg?v=3" type="image/svg+xml">
+<link rel="icon" href="logo-icon.svg?v=4" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css?v=53">
 </head>
 <body>
 
-<!-- The logo, defined once and reused everywhere: an "i" with a glowing pixel dot and a circuit-trace "S" with a glitch split -->
+<!-- The logo, defined once and reused everywhere: an E whose middle bar blinks like a terminal cursor (E, then C) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <linearGradient id="lg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
@@ -45,12 +45,11 @@
     <linearGradient id="lgs" x1="20" y1="100" x2="100" y2="20" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#a855f7"/>
     </linearGradient>
-    <!-- "S" drawn as a journey: a glowing start node, an S-curve route, an arrow out -->
+    <!-- "E" as a C plus a cursor bar: with the bar on it reads E, with it off it reads C -->
     <symbol id="logo-mark" viewBox="0 0 120 120">
       <rect x="2" y="2" width="116" height="116" rx="30" fill="url(#lbg)" stroke="url(#lg)" stroke-width="3"/>
-      <path d="M28 88H68a14 14 0 0 0 0-28H52a14 14 0 0 1 0-28H84" fill="none" stroke="url(#lgs)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M80 20 96 32 80 44" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle class="lm-dot" cx="28" cy="88" r="9" fill="#fff" filter="url(#lglow)"/>
+      <path d="M82 29.5H44a7 7 0 0 0-7 7V83a7 7 0 0 0 7 7H82" fill="none" stroke="url(#lgs)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect class="lm-cursor" x="46" y="53" width="31" height="13.5" rx="3" fill="#fff" filter="url(#lglow)"/>
     </symbol>
   </defs>
 </svg>
@@ -64,9 +63,8 @@
     <svg class="splash-mark" viewBox="0 0 120 120" fill="none">
       <path class="tile-fill" d="M32 2h56a30 30 0 0 1 30 30v56a30 30 0 0 1-30 30H32A30 30 0 0 1 2 88V32A30 30 0 0 1 32 2z" fill="url(#lbg)"/>
       <path class="draw d1" pathLength="1" d="M32 2h56a30 30 0 0 1 30 30v56a30 30 0 0 1-30 30H32A30 30 0 0 1 2 88V32A30 30 0 0 1 32 2z" stroke="url(#lg)" stroke-width="3"/>
-      <g class="nodes"><circle cx="28" cy="88" r="9" fill="#fff" filter="url(#lglow)"/></g>
-      <path class="draw d3" pathLength="1" d="M28 88H68a14 14 0 0 0 0-28H52a14 14 0 0 1 0-28H84" stroke="url(#lgs)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-      <path class="arrow-in" d="M80 20 96 32 80 44" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="draw d3" pathLength="1" d="M82 29.5H44a7 7 0 0 0-7 7V83a7 7 0 0 0 7 7H82" stroke="url(#lgs)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect class="splash-cursor" x="46" y="53" width="31" height="13.5" rx="3" fill="#fff" filter="url(#lglow)"/>
     </svg>
     <p class="splash-name" data-text="ILYES SAAD CHENAOUA">ILYES SAAD CHENAOUA</p>
     <p class="splash-sub">&gt; product · clients · growth<span class="caret">_</span></p>
